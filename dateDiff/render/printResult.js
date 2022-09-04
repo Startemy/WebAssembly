@@ -1,4 +1,5 @@
-import { declensionNum } from '../timer/declension.js'
+import { declensionNum } from '../hendler/timer/declension.js'
+import { stop } from '../hendler/timer/timer.js';
 
 const result = document.getElementById('datecalc__result')
 
@@ -6,7 +7,7 @@ const $days = document.querySelector('.timer__days');
 const $hours = document.querySelector('.timer__hours');
 const $minutes = document.querySelector('.timer__minutes');
 const $seconds = document.querySelector('.timer__seconds');
-
+const btnStop = document.querySelector('.timer__stop')
 
 export const printError = (errorText) => {
   result.innerText = errorText
@@ -27,3 +28,6 @@ export const printTimer = (days,hours,minutes,seconds) => {
   $seconds.dataset.title = declensionNum(seconds, ['секунда', 'секунды', 'секунд'])
 }
 
+btnStop.addEventListener('click', ()=> {
+  stop()
+})

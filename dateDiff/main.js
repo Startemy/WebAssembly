@@ -1,6 +1,6 @@
-import { printError, printResult } from '../calcDate/printResult.js'
-import getDateDiff from '../calcDate/getDateDiff.js'
-import { countdownTimer } from '../timer/timer.js';
+import { printError, printResult } from './render/printResult.js'
+import getDateDiff from './hendler/calcDate/getDateDiff.js'
+import { countdownTimer } from './hendler/timer/timer.js';
 
 const form = document.getElementById('datecalc');
 const formTimer = document.getElementById('timer');
