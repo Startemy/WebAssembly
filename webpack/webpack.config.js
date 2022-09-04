@@ -1,16 +1,25 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+const Analyzer = require('webpack-bundle-analyzer').BundleAnalyzerPlugin;
 
 const { resolve } = require('path')
 
 module.exports = {
-  entry: './index.js',
+  entry: {
+    app: './index.js',
+  },
   mode: 'development',
+  devtool: 'source-map',
+  resolve: {
+    extensions: ['.ts', ".js"],
+  },
+
   output: {
     path: resolve(__dirname, 'build'),
     filename: 'main.[contenthash].js',
-    path: resolve(__dirname, 'build')
+    clean: true
   },
+
   module: {
     rules: [
       {
@@ -30,13 +39,16 @@ module.exports = {
       }
     ]
   },
+  
   plugins: [
-    new HtmlWebpackPlugin({template:resolve(__dirname, 'index.html')}),
-    new MiniCssExtractPlugin({filename:'[name].[contenthash].css'})
+    new HtmlWebpackPlugin({ template: resolve(__dirname, 'index.html') }),
+    new MiniCssExtractPlugin({ filename: '[name].[contenthash].css' }),
+    new Analyzer()
   ],
+
   devServer: {
     port: 5555,
-    static: true,
     static: "./build",
+    hot:true
   },
 }

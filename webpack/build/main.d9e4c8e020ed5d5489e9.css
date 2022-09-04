@@ -1,0 +1,40 @@
+/*!***********************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./scss/styles.scss ***!
+  \***********************************************************************************************************/
+.timer__items {
+  display: flex;
+  font-size: 48px;
+}
+
+.timer__item {
+  position: relative;
+  min-width: 60px;
+  margin-left: 10px;
+  margin-right: 10px;
+  padding-bottom: 15px;
+  text-align: center;
+}
+.timer__item::before {
+  content: attr(data-title);
+  display: block;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  font-size: 14px;
+}
+.timer__item:not(:last-child)::after {
+  content: ":";
+  position: absolute;
+  right: -15px;
+}
+
+.datecalc {
+  display: none;
+}
+
+.timer {
+  display: none;
+}
+
+/*# sourceMappingURL=main.d9e4c8e020ed5d5489e9.css.map*/
