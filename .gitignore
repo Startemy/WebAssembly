@@ -1,2 +1,7 @@
-/bundlers/node_modules
 /webpack/node_modules
+/webpack/build
+/homework_3/node_modules
+/homework_3/assets/audio
+/homework_3/assets/images
+/homework_3/assets/video
+/homework_3/build

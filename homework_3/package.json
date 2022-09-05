@@ -1,5 +1,5 @@
 {
-  "name": "webpack",
+  "name": "homework_3",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -9,33 +9,25 @@
     "start": "npm run clean && npx webpack --mode=development",
     "serve": "npx webpack serve --mode=development"
   },
-  "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "compression-webpack-plugin": "^10.0.0",
     "css-loader": "^6.7.1",
     "file-loader": "^6.2.0",
     "html-webpack-plugin": "^5.5.0",
     "image-minimizer-webpack-plugin": "^3.3.0",
+    "imagemin": "^8.0.1",
     "imagemin-gifsicle": "^7.0.0",
     "imagemin-jpegtran": "^7.0.0",
-    "imagemin-mozjpeg": "^10.0.0",
     "imagemin-optipng": "^8.0.0",
     "imagemin-svgo": "^10.0.1",
+    "img-optimize-loader": "^1.0.7",
     "mini-css-extract-plugin": "^2.6.1",
     "sass": "^1.54.8",
     "sass-loader": "^13.0.2",
     "style-loader": "^3.3.1",
     "webpack": "^5.74.0",
-    "webpack-bundle-analyzer": "^4.6.1",
     "webpack-cli": "^4.10.0",
     "webpack-dev-server": "^4.10.1"
-  },
-  "dependencies": {
-    "imagemin": "^8.0.1",
-    "imagemin-pngquant": "^9.0.2",
-    "imagemin-webp": "^7.0.0",
-    "luxon": "^3.0.3"
   }
 }
