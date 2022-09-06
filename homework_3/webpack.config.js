@@ -49,7 +49,28 @@ module.exports = {
           "css-loader",
           "sass-loader",
         ],
-      }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          {
+            loader: ImageMinimizerPlugin.loader,
+            options: {
+              minimizer: {
+                implementation: ImageMinimizerPlugin.imageminMinify,
+                options: {
+                  plugins: [
+                    "imagemin-gifsicle",
+                    "imagemin-mozjpeg",
+                    "imagemin-pngquant",
+                    "imagemin-svgo",
+                  ],
+                },
+              },
+            },
+          },
+        ],
+      },
     ]
   },
 
