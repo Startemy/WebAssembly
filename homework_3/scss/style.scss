@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+  font-size: 40px;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.header {
+  h1 {
+    color: red;
+  }
+}
+
+.picture {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+
+
+  & .card {
+    max-width: 400px;
+    max-height: 400px;
+    display: grid;
+    grid-template-rows: 300px 80px;
+    row-gap: 20px;
+
+    div {
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      img {
+        min-width: 100%;
+        flex-shrink: 0;
+      }
+
+      video {
+        min-width: 100%;
+      }
+
+      audio {
+        min-width: 400px;
+      }
+    }
+
+    p {
+      justify-self: center;
+    }
+  }
+}
